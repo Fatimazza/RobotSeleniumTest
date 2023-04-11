@@ -37,6 +37,9 @@ Close The Browser
 Input Username
     Input Text    ${usernameField}    standard_user
 
+Input Username Wrong
+    Input Text    ${usernameField}    random_user
+
 Input Password
     Input Text    ${passwordField}    secret_sauce
 
@@ -46,3 +49,6 @@ Click Button Login
 
 Verify Login Website
     Page Should Contain    Products
+
+Verify Wrong User
+    Page Should Contain    do not match any user
