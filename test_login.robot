@@ -1,8 +1,7 @@
 *** Settings ***
-Library             SeleniumLibrary
-
-Suite Setup         Open Browser    ${url}    ${browserChrome}
-Suite Teardown      Close Browser
+Library     SeleniumLibrary
+# Suite Setup    Open Browser    ${url}    ${browserChrome}
+# Suite Teardown    Close Browser
 
 
 *** Variables ***
@@ -18,10 +17,20 @@ ${loginButton}          //input[@id='login-button']
 
 *** Test Cases ***
 User Login with Valid Data
+    [Setup]    Open Browser Chrome
     Input Username
     Input Password
     Click Button Login
     Verify Login Website
+    [Teardown]    Close The Browser
+
+User Login with Invalid Data
+    [Setup]    Open Browser Chrome
+    Input Username Wrong
+    Input Password
+    Click Button Login
+    Verify Wrong User
+    [Teardown]    Close The Browser
 
 
 *** Keywords ***
