@@ -15,6 +15,14 @@ ${passwordField}    //input[@id='password']
 ${loginButton}      //input[@id='login-button']
 
 
+*** Test Cases ***
+User Login with Valid Data
+    Input Username
+    Input Password
+    Click Button Login
+    Verify Login Website
+
+
 *** Keywords ***
 Input Username
     Input Text    ${usernameField}    standard_user
