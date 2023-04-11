@@ -6,13 +6,14 @@ Suite Teardown      Close Browser
 
 
 *** Variables ***
-${url}              https://www.saucedemo.com/
-${browserChrome}    Chrome
+${url}                  https://www.saucedemo.com/
+${browserChrome}        Chrome
+${browserFirefox}       Firefox
 
 # Locators
-${usernameField}    //input[@id='user-name']
-${passwordField}    //input[@id='password']
-${loginButton}      //input[@id='login-button']
+${usernameField}        //input[@id='user-name']
+${passwordField}        //input[@id='password']
+${loginButton}          //input[@id='login-button']
 
 
 *** Test Cases ***
@@ -24,6 +25,15 @@ User Login with Valid Data
 
 
 *** Keywords ***
+Open Browser Chrome
+    Open Browser    ${url}    ${browserChrome}
+
+Open Browser Firefox
+    Open Browser    ${url}    ${browserFirefox}
+
+Close The Browser
+    Close Browser
+
 Input Username
     Input Text    ${usernameField}    standard_user
 
