@@ -1,5 +1,8 @@
 *** Settings ***
-Library     SeleniumLibrary
+Library             SeleniumLibrary
+
+Suite Setup         Open Browser    ${url}    ${browserChrome}
+Suite Teardown      Close Browser
 
 
 *** Variables ***
