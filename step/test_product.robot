@@ -2,6 +2,7 @@
 Library         SeleniumLibrary
 Variables       ../resources/login_locators.yaml
 Variables       ../resources/product_listing_locators.yaml
+Variables       ../resources/product_detail_locators.yaml
 
 
 *** Variables ***
@@ -16,6 +17,8 @@ User Open Product Detail
     Input Password
     Click Button Login
     Verify Login Website
+    Click Third Product
+    Verify Third Product Detail
     [Teardown]    Close Browser
 
 
@@ -35,3 +38,14 @@ Click Button Login
 
 Verify Login Website
     Page Should Contain    Products
+
+Click Third Product
+    Click Element    ${thirdProduct}
+    Sleep    3s
+
+Verify Third Product Detail
+    Element Text Should Be    ${productDetailName}    Sauce Labs Bolt T-Shirt
+    Element Should Contain
+    ...    ${productDetailDesc}
+    ...    Get your testing superhero on with the Sauce Labs bolt T-shirt
+    Element Text Should Be    ${productDetailPrice}    $15.99
