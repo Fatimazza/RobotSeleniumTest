@@ -74,7 +74,7 @@ Verify Login Website
     Page Should Contain    Products
 
 Verify First Product Available
-    Page Should Contain Element    ${firstProductName}
+    Page Should Contain Element    ${firstProduct}
 
 Verify Wrong User
     Page Should Contain    do not match any user
