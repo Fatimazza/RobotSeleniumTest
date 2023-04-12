@@ -3,6 +3,7 @@ Library         SeleniumLibrary
 # Suite Setup    Open Browser    ${url}    ${browserChrome}
 # Suite Teardown    Close Browser
 Variables       ../resources/login_locators.yaml
+Variables       ../resources/product_listing_locators.yaml
 
 
 *** Variables ***
@@ -34,6 +35,16 @@ User Login with Invalid Data
     Verify Wrong User
     [Teardown]    Close Browser
 
+User Logout
+    [Setup]    Open The Browser
+    Input Username
+    Input Password
+    Click Button Login
+    Click Hamburger Menu
+    Click Logout Button
+    Verify Logout Website
+    [Teardown]    Close Browser
+
 
 *** Keywords ***
 Open The Browser
@@ -56,10 +67,21 @@ Input Password
 
 Click Button Login
     Click Button    ${loginButton}
-    Sleep    1s
+    Sleep    3s
 
 Verify Login Website
     Page Should Contain    Products
 
 Verify Wrong User
     Page Should Contain    do not match any user
+
+Click Hamburger Menu
+    Click Button    ${hamburgerMenu}
+    Sleep    3s
+
+Click Logout Button
+    Click Link    ${logoutLink}
+    Sleep    5s
+
+Verify Logout Website
+    Page Should Contain Button    ${loginButton}
