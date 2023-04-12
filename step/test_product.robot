@@ -3,6 +3,7 @@ Library         SeleniumLibrary
 Variables       ../resources/login_locators.yaml
 Variables       ../resources/product_listing_locators.yaml
 Variables       ../resources/product_detail_locators.yaml
+Variables       ../resources/cart_locators.yaml
 
 
 *** Variables ***
@@ -29,6 +30,7 @@ User Add Product to Cart
     Click Third Product
     Add Product to Cart
     Open Cart Page
+    Verify Product in Cart
     [Teardown]    Close Browser
 
 
@@ -67,3 +69,7 @@ Add Product to Cart
 Open Cart Page
     Click Element    ${shoppingCartButton}
     Sleep    3s
+
+Verify Product in Cart
+    Element Text Should Be    ${cartProductName}    Sauce Labs Bolt T-Shirt
+    Element Text Should Be    ${cartProductQuantity}    1
