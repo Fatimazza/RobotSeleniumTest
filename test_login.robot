@@ -25,12 +25,12 @@ User Login with Valid Data
     [Teardown]    Close Browser
 
 User Login with Invalid Data
-    [Setup]    Open Browser Chrome
+    [Setup]    Run Keywords    Open Browser Chrome    Open Browser Firefox
     Input Username Wrong
     Input Password
     Click Button Login
     Verify Wrong User
-    [Teardown]    Close The Browser
+    [Teardown]    Close All Browsers
 
 
 *** Keywords ***
