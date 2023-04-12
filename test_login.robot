@@ -6,6 +6,7 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${url}                  https://www.saucedemo.com/
+${browser}              Chrome
 ${browserChrome}        Chrome
 ${browserFirefox}       Firefox
 
@@ -17,7 +18,7 @@ ${loginButton}          //input[@id='login-button']
 
 *** Test Cases ***
 User Login with Valid Data
-    [Setup]    Open Browser Chrome
+    [Setup]    Open The Browser
     Input Username
     Input Password
     Click Button Login
@@ -25,7 +26,7 @@ User Login with Valid Data
     [Teardown]    Close Browser
 
 User Login with Invalid Data
-    [Setup]    Open Browser Chrome
+    [Setup]    Open The Browser
     Input Username Wrong
     Input Password
     Click Button Login
@@ -34,6 +35,9 @@ User Login with Invalid Data
 
 
 *** Keywords ***
+Open The Browser
+    Open Browser    ${url}    ${browser}
+
 Open Browser Chrome
     Open Browser    ${url}    ${browserChrome}
 
