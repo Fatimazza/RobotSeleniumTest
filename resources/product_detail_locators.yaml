@@ -1,3 +1,5 @@
 productDetailName: css=div.inventory_details_name
 productDetailDesc: css=div.inventory_details_desc
 productDetailPrice: css=div.inventory_details_price
+addToCartButton: //button[@class='btn btn_primary btn_small btn_inventory']
+shoppingCartButton: id=shopping_cart_container

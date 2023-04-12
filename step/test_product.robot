@@ -21,6 +21,16 @@ User Open Product Detail
     Verify Third Product Detail
     [Teardown]    Close Browser
 
+User Add Product to Cart
+    [Setup]    Open The Browser
+    Input Username
+    Input Password
+    Click Button Login
+    Click Third Product
+    Add Product to Cart
+    Open Cart Page
+    [Teardown]    Close Browser
+
 
 *** Keywords ***
 Open The Browser
@@ -49,3 +59,11 @@ Verify Third Product Detail
     ...    ${productDetailDesc}
     ...    Get your testing superhero on with the Sauce Labs bolt T-shirt
     Element Text Should Be    ${productDetailPrice}    $15.99
+
+Add Product to Cart
+    Click Element    ${addToCartButton}
+    Sleep    3s
+
+Open Cart Page
+    Click Element    ${shoppingCartButton}
+    Sleep    3s
