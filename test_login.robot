@@ -22,7 +22,7 @@ User Login with Valid Data
     Input Password
     Click Button Login
     Verify Login Website
-    [Teardown]    Close The Browser
+    [Teardown]    Close Browser
 
 User Login with Invalid Data
     [Setup]    Open Browser Chrome
@@ -39,9 +39,6 @@ Open Browser Chrome
 
 Open Browser Firefox
     Open Browser    ${url}    ${browserFirefox}
-
-Close The Browser
-    Close Browser
 
 Input Username
     Input Text    ${usernameField}    standard_user
