@@ -2,5 +2,3 @@ hamburgerMenu: react-burger-menu-btn
 logoutLink: //a[contains(text(),'Logout')]
 firstProduct: //div[@class='inventory_item_name' and text()='Sauce Labs Backpack']
 thirdProduct: css=.inventory_list .inventory_item:nth-of-type(3) .inventory_item_name
-#.inventory_item:nth-of-type(3)
-
