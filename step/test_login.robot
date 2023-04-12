@@ -1,7 +1,8 @@
 *** Settings ***
-Library     SeleniumLibrary
+Library         SeleniumLibrary
 # Suite Setup    Open Browser    ${url}    ${browserChrome}
 # Suite Teardown    Close Browser
+Variables       ../resources/login_locators.yaml
 
 
 *** Variables ***
@@ -11,9 +12,9 @@ ${browserChrome}        Chrome
 ${browserFirefox}       Firefox
 
 # Locators
-${usernameField}        //input[@id='user-name']
-${passwordField}        //input[@id='password']
-${loginButton}          //input[@id='login-button']
+# ${usernameField}    //input[@id='user-name']
+# ${passwordField}    //input[@id='password']
+# ${loginButton}    //input[@id='login-button']
 
 
 *** Test Cases ***
