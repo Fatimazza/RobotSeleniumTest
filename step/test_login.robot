@@ -25,6 +25,7 @@ User Login with Valid Data
     Input Password
     Click Button Login
     Verify Login Website
+    Verify First Product Available
     [Teardown]    Close Browser
 
 User Login with Invalid Data
@@ -71,6 +72,9 @@ Click Button Login
 
 Verify Login Website
     Page Should Contain    Products
+
+Verify First Product Available
+    Page Should Contain Element    ${firstProductName}
 
 Verify Wrong User
     Page Should Contain    do not match any user
