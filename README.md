@@ -82,8 +82,25 @@ Run All Test Execution on Terminal
 robot --outputdir output/ .
 ```
 
-> Note: By default the Tests run on Chrome Browser
+> Note: Please wait until all test execution finished
+
+> Default Browser used is Chrome
+
+Run All Test on Various Browser
+
+```Bash
+robot --variable browser:chrome --outputdir output/chrome .
+```
+
+```Bash
+robot --variable browser:firefox --outputdir output/firefox .
+```
+
+```Bash
+robot --variable browser:safari --outputdir output/safari .
+```
 
 ### Test Execution HTML Report
 
-:white_check_mark: Report available on <b> RobotSeleniumTest/output/report.html </b>
+:white_check_mark: Report available on <b> RobotSeleniumTest/output/report.html </b> OR <br/><br/>
+:white_check_mark: Report available on <b> RobotSeleniumTest/output/browser/report.html </b>
