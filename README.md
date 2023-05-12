@@ -14,6 +14,7 @@ What will be used on this project
 | Editor         | VS Code (https://code.visualstudio.com/download) |
 | Package Manager| PIP (https://pip.pypa.io/en/stable/getting-started/) |
 | UI Test Tools  | Robot Framework with Python (https://robotframework.org/#getting-started) |
+|                | Selenium Library (https://github.com/robotframework/SeleniumLibrary/) |
 |                | PyYaml (https://pypi.org/project/PyYAML/) |
 | Design Pattern | Selenium POM or Page Object Model |
 | Test Reporter  | Robot Framework with Python (https://robotframework.org/#getting-started)|
